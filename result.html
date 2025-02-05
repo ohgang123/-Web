@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <title>연서의 음식 취향 결과</title>
+    
+    <style>
+      @font-face {
+        font-family: "S-CoreDream-3Light";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+    
+      body {
+        font-family: S-CoreDream-3Light;
+        background-color: #FFF8DC; /* 연한 크림톤 노란색 */
+        color: #333; /* 가독성을 위한 어두운 글씨 */
+      }
+    
+      #result {
+        color: #D4A017 !important; /* 노란색 (황금빛) 강제 적용 */
+        font-weight: bold;
+        font-size: 28px;
+      }
+      
+    
+      .card {
+        background-color: #FFEBB5; /* 카드 배경을 연한 노란색 */
+        border-radius: 15px;
+        padding: 20px;
+      }
+    
+      #restart-button {
+        background-color: #FFE082; /* 파스텔톤 노란색 */
+        border: none;
+        color: #333;
+        font-weight: bold;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+      }
+    
+      #restart-button:hover {
+        background-color: #FFD54F; /* 마우스 올리면 더 밝은 노란색 */
+      }
+    
+      .fw-bold {
+        color: #D4A017; /* 강조 텍스트 색상 */
+      }
+    </style>
+    
+    
+  </head>
+
+  <body class="bg-light">
+    <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
+      <h1 class="text-center mb-4">🍽 당신이 생각하는 연서의 음식 취향은? 🍽</h1>
+      <div class="card shadow text-center">
+        <h2 class="text-primary mb-3" id="result"></h2>
+        <p class="mb-4" id="description"></p>
+        <p class="fw-bold mt-2" id="correct-answer"></p>
+        <p class="fw-bold mt-2" id="food-labels"></p>
+        <button type="button" class="btn btn-primary mt-3" id="restart-button" onclick="window.location.href='./index.html'">테스트 다시 하기</button>
+      </div>
+    </div>
+
+    <script src="./result.js"></script>
+  </body>
+</html>
